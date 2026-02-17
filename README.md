@@ -1,11 +1,21 @@
 # 🔎 Fetch GitHub API
 
-Aplicação web que consome a API pública do GitHub para buscar informações de um usuário e exibir:
+Aplicação web que consome a API pública do GitHub para buscar informações de um usuário e exibir dados completos do perfil e seus repositórios.
 
+A aplicação apresenta:
+
+### 👤 Informações do Perfil
 - 📸 Foto de perfil  
 - 👤 Nome  
 - 📝 Bio  
-- 📦 Os 10 repositórios mais recentes  
+- 👥 Número de seguidores  
+- 🔄 Número de usuários que está seguindo  
+
+### 📦 Informações dos Repositórios (últimos 10)
+- ⭐ Quantidade de estrelas  
+- 🍴 Número de forks  
+- 👁️ Número de watchers  
+- 💻 Linguagem principal utilizada 
 
 Projeto focado em consumo de API, manipulação de dados assíncronos e renderização dinâmica no DOM.
 
@@ -13,7 +23,7 @@ Projeto focado em consumo de API, manipulação de dados assíncronos e renderiz
 
 ## 🖼️ Preview
 
-![Preview do projeto](./src/images/project-fetch-github-api.gif)
+![Preview do projeto](./src/images/fetch-github-api.gif)
 
 ---
 
@@ -33,12 +43,13 @@ Este projeto teve como foco:
 - Tratamento básico de erros
 - Manipulação de objetos retornados pela API
 - Renderização dinâmica no DOM
-- Organização de código JavaScript
+- Organização de fluxo da aplicação
 
 Também foi necessário lidar com:
 
 - Estrutura de dados complexa (arrays de repositórios)
 - Limitação da quantidade exibida (top 10)
+- Extração de métricas relevantes (forks, estrelas, linguagem)
 - Validação de entrada do usuário
 
 ---
@@ -55,18 +66,17 @@ Também foi necessário lidar com:
 ## 📊 Competências Demonstradas
 
 ✔ Consumo de API REST  
-✔ Programação assíncrona  
-✔ Manipulação de arrays  
+✔ Programação assíncrona com `async/await`  
+✔ Manipulação de objetos e arrays complexos  
+✔ Extração e organização de métricas  
 ✔ Estruturação de lógica condicional  
-✔ Integração Front-End com dados externos  
+✔ Integração Front-End com dados externos   
 
 ---
 
 ## 🎯 Objetivo do Projeto
 
-Este projeto faz parte da minha evolução como desenvolvedora front-end, consolidando conhecimentos em JavaScript moderno e integração com APIs reais.
-
-A proposta foi simular uma funcionalidade próxima de um produto real: buscar dados externos, tratá-los e exibi-los de forma organizada e clara para o usuário.
+Consolidar conhecimentos em JavaScript moderno e integração com APIs reais, simulando um cenário prático de mercado onde dados externos precisam ser consumidos, tratados e exibidos de forma clara e organizada.
 
 ---
 
@@ -84,5 +94,6 @@ Desenvolvedora Front-End em formação
 
 - Implementar loading state  
 - Melhorar tratamento de erro (usuário inexistente)  
-- Tornar totalmente responsivo  
+- Paginação de repositórios  
+- Filtro por linguagem  
 - Evoluir para versão com React  
