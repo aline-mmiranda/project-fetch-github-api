@@ -1,23 +1,6 @@
-# 🔎 Fetch GitHub API
+# GitHub Profile Card 🔎
 
-Aplicação web que consome a API pública do GitHub para buscar informações de um usuário e exibir dados completos do perfil e seus repositórios.
-
-A aplicação apresenta:
-
-### 👤 Informações do Perfil
-- 📸 Foto de perfil  
-- 👤 Nome  
-- 📝 Bio  
-- 👥 Número de seguidores  
-- 🔄 Número de usuários que está seguindo  
-
-### 📦 Informações dos Repositórios (últimos 10)
-- ⭐ Quantidade de estrelas  
-- 🍴 Número de forks  
-- 👁️ Número de watchers  
-- 💻 Linguagem principal utilizada 
-
-Projeto focado em consumo de API, manipulação de dados assíncronos e renderização dinâmica no DOM.
+Aplicação web que consome a API pública do GitHub para buscar e exibir perfis de usuários em tempo real, com foco em experiência do usuário e boas práticas de desenvolvimento front-end.
 
 ---
 
@@ -29,71 +12,66 @@ Projeto focado em consumo de API, manipulação de dados assíncronos e renderiz
 
 ## 🌐 Deploy
 
-🔗 **Acesse online:**  
+🔗 **Acesse online:**
 [Ver projeto funcionando](https://aline-mmiranda.github.io/project-fetch-github-api/)
 
 ---
 
-## 🧠 Desafio Técnico
+## ✨ Funcionalidades
 
-Este projeto teve como foco:
+### 👤 Perfil do usuário
+- Foto, nome, @login e bio
+- Localização, empresa e site pessoal
+- Contagem de repositórios, seguidores e seguindo
 
-- Requisições HTTP utilizando `fetch`
-- Uso de `async/await`
-- Tratamento básico de erros
-- Manipulação de objetos retornados pela API
-- Renderização dinâmica no DOM
-- Organização de fluxo da aplicação
+### 📦 Repositórios recentes
+- Grid com os 6 repositórios mais recentes
+- Linguagem principal com color dot
+- Contagem de estrelas e forks
 
-Também foi necessário lidar com:
-
-- Estrutura de dados complexa (arrays de repositórios)
-- Limitação da quantidade exibida (top 10)
-- Extração de métricas relevantes (forks, estrelas, linguagem)
-- Validação de entrada do usuário
+### 🎨 Experiência do usuário
+- **Loading skeleton** animado enquanto a API responde
+- **3 estados de erro** distintos: usuário não encontrado, limite de requisições e erro de conexão
+- **Histórico de buscas** com localStorage — últimas 5 buscas salvas como pills clicáveis
+- Layout responsivo com colapso para mobile
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🧠 Desafios Técnicos
 
-- HTML5  
-- CSS3  
-- JavaScript (ES6+)  
-- GitHub REST API  
+- Requisições paralelas com `Promise.all` para buscar perfil e repositórios simultaneamente
+- Skeleton loading sincronizado com o layout real do card
+- Persistência do histórico de buscas entre sessões com localStorage
+- Tratamento diferenciado por tipo de erro (404, 403, falha de rede)
+- Mapa de cores por linguagem de programação para os language dots
+
+---
+
+## 🛠️ Tecnologias
+
+- HTML5
+- CSS3 (custom properties, CSS Grid, animações)
+- JavaScript ES6+ (async/await, Promise.all, localStorage)
+- GitHub REST API
 
 ---
 
 ## 📊 Competências Demonstradas
 
-✔ Consumo de API REST  
-✔ Programação assíncrona com `async/await`  
-✔ Manipulação de objetos e arrays complexos  
-✔ Extração e organização de métricas  
-✔ Estruturação de lógica condicional  
-✔ Integração Front-End com dados externos   
-
----
-
-## 🎯 Objetivo do Projeto
-
-Consolidar conhecimentos em JavaScript moderno e integração com APIs reais, simulando um cenário prático de mercado onde dados externos precisam ser consumidos, tratados e exibidos de forma clara e organizada.
+✔ Consumo de API REST com Fetch  
+✔ Programação assíncrona com `async/await` e `Promise.all`  
+✔ Persistência de dados com localStorage  
+✔ Manipulação dinâmica do DOM  
+✔ Gerenciamento de múltiplos estados de UI (loading, erro, vazio, resultado)  
+✔ CSS Grid responsivo  
+✔ Design de produto com identidade visual própria  
 
 ---
 
 ## ✨ Autora
 
-**Aline M Miranda**  
-Desenvolvedora Front-End em formação  
+**Aline M Miranda**
+Desenvolvedora Front-End em transição de carreira
 
-[![GitHub](https://img.shields.io/badge/-GitHub-000?style=flat-square&logo=github&logoColor=white)](https://github.com/aline-mmiranda)  
+[![GitHub](https://img.shields.io/badge/-GitHub-000?style=flat-square&logo=github&logoColor=white)](https://github.com/aline-mmiranda)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aline-mmiranda)
-
----
-
-## 📌 Próximos Passos
-
-- Implementar loading state  
-- Melhorar tratamento de erro (usuário inexistente)  
-- Paginação de repositórios  
-- Filtro por linguagem  
-- Evoluir para versão com React  
